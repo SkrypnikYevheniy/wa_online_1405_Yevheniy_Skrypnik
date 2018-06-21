@@ -60,27 +60,76 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(4);
 
 
 /***/ }),
-/* 1 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(5);
+
+var cart = [{
+    title: 'macbook',
+    price: 2000
+}, {
+    title: 'macbook',
+    price: 2345
+}, {
+    title: 'macbook',
+    price: 345
+}];
+
+function total(samePrice) {
+    var summa = 0;
+    for (var i = 0; i < samePrice.length; i++) {
+        summa += cart[i].price;
+    }
+    console.log(summa);
+}
+
+total(cart);
+
+function randominteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+console.log(randominteger(10, 25));
+
+var user = {};
+user.name = 'Вася';
+console.log(user);
+user.surname = 'Петров';
+console.log(user);
+user.name = 'Сергей';
+console.log(user);
+delete user.name;
+console.log(user);
+
+function isEmpty(obj) {
+    if (Object.keys(obj).length == 0) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+}
+isEmpty(user);
+isEmpty({});
 
 /***/ }),
-/* 2 */
+/* 5 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

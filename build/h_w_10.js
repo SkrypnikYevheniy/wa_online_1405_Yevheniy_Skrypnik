@@ -60,30 +60,117 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(7);
 
 
 /***/ }),
-/* 1 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(8);
+
+var _light = __webpack_require__(9);
+
+var _light_js = __webpack_require__(10);
+
+(0, _light.clickCounter)();
+(0, _light_js.clickCounterJs)();
 
 /***/ }),
-/* 2 */
+/* 8 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.clickCounter = clickCounter;
+function clickCounter() {
+    var input_red = document.querySelector('.input_red');
+    var input_yellow = document.querySelector('.input_yellow');
+    var input_green = document.querySelector('.input_green');
+    var content_show_red = document.querySelector('.content_show_red');
+
+    input_red.addEventListener('click', clickRed);
+    input_yellow.addEventListener('click', clickYellow);
+    input_green.addEventListener('click', clickGreen);
+
+    var redCounter = 2;
+    var yellowCounter = 2;
+    var greenCounter = 2;
+
+    function clickRed() {
+        redCounter++;
+        if (redCounter > 2) {
+            //content_show_red.classList.remove('content_show_red');
+            redCounter = 1;
+        }
+    }
+    function clickYellow() {
+        yellowCounter++;
+        if (yellowCounter > 2) {
+            yellowCounter = 1;
+        }
+    }
+    function clickGreen() {
+        greenCounter++;
+        if (greenCounter > 2) {
+            greenCounter = 1;
+        }
+    }
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.clickCounterJs = clickCounterJs;
+function clickCounterJs(elem) {
+    var lights = document.querySelectorAll("#content_wrapper_light > div");
+    if (elem.id == "input_red_js") {
+        elem.className = "open";
+        lights[1].className = "closed";
+        lights[2].className = "closed";
+    } else if (elem.id == "input_yellow_js") {
+        elem.className = "open";
+        lights[0].className = "closed";
+        lights[2].className = "closed";
+    } else {
+        elem.className = "open";
+        lights[1].className = "closed";
+        lights[0].className = "closed";
+    }
+}
 
 /***/ })
 /******/ ]);
