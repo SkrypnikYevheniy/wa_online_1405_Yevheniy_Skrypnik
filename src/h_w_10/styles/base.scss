@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    padding-top: 50px;
+}
+.content_wrapper {
+    width: 50px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.content_wrapper_js {
+    top: 50px;
+}
+.content {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+}
+.content_position_top {
+    top: 10px;
+}
+.content_position_bottom {
+    bottom: 10px;
+}
+
+#red:checked ~ .content_show_red {
+    background-color: red;
+}
+#yellow:checked ~ .content_show_yellow {
+    background-color: yellow;
+}
+#green:checked ~ .content_show_green {
+    background-color: green;
+}
+.content_show {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.content_show_red_js {
+    background-color: red;
+}
+.content_show_red_none_js {
+    background-color: white;
+}
+.content_show_yellow_js {
+    background-color: yellow;
+}
+.content_show_yellow_none_js {
+    background-color: white;
+}
+.content_show_green_js {
+    background-color: green;
+}
+.content_show_green_none_js {
+    background-color: white;
+}
+#input_red_js.open      {background-color: red;}
+#input_red_js.closed    {background-color: white;}
+
+#input_yellow_js.open   {background-color: #FFFF00;}
+#input_yellow_js.closed {background-color: white;}
+
+#input_green_js.open    {background-color: green;}
+#input_green_js.closed  {background-color: white;}
