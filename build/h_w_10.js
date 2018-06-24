@@ -152,25 +152,43 @@ function clickCounter() {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.clickCounterJs = clickCounterJs;
-function clickCounterJs(elem) {
-    var lights = document.querySelectorAll("#content_wrapper_light > div");
-    if (elem.id == "input_red_js") {
-        elem.className = "open";
-        lights[1].className = "closed";
-        lights[2].className = "closed";
-    } else if (elem.id == "input_yellow_js") {
-        elem.className = "open";
-        lights[0].className = "closed";
-        lights[2].className = "closed";
-    } else {
-        elem.className = "open";
-        lights[1].className = "closed";
-        lights[0].className = "closed";
-    }
+
+__webpack_require__(11);
+
+function clickCounterJs() {
+  var lights = document.querySelector('.content_show__js');
+  var lightsRed = document.querySelector('.content_show__red_js');
+  var lightsYellow = document.querySelector('.content_show__yellow_js');
+  var lightsGreen = document.querySelector('.content_show__green_js');
+
+  function redShow() {
+    lightsRed.classList.add('content_show__active_js');
+    lightsYellow.classList.remove('content_show__active_js');
+    lightsGreen.classList.remove('content_show__active_js');
+  }
+  function yellowShow() {
+    lightsYellow.classList.add('content_show__active_js');
+    lightsRed.classList.remove('content_show__active_js');
+    lightsGreen.classList.remove('content_show__active_js');
+  }
+  function greenShow() {
+    lightsGreen.classList.add('content_show__active_js');
+    lightsYellow.classList.remove('content_show__active_js');
+    lightsRed.classList.remove('content_show__active_js');
+  }
+  lightsRed.addEventListener('click', redShow);
+  lightsYellow.addEventListener('click', yellowShow);
+  lightsGreen.addEventListener('click', greenShow);
 }
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

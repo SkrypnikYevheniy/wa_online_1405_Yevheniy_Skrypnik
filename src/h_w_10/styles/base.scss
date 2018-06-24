@@ -55,29 +55,21 @@ body {
     margin-bottom: 10px;
     border: 1px solid black;
 }
-.content_show_red_js {
+.content_show__js {
+    margin-top: 50px;
+}
+.content_show__red_js {
+    &.content_show__active_js {
     background-color: red;
+    }
 }
-.content_show_red_none_js {
-    background-color: white;
-}
-.content_show_yellow_js {
+.content_show__yellow_js {
+    &.content_show__active_js {
     background-color: yellow;
+    }
 }
-.content_show_yellow_none_js {
-    background-color: white;
-}
-.content_show_green_js {
+.content_show__green_js {
+    &.content_show__active_js {
     background-color: green;
+    }
 }
-.content_show_green_none_js {
-    background-color: white;
-}
-#input_red_js.open      {background-color: red;}
-#input_red_js.closed    {background-color: white;}
-
-#input_yellow_js.open   {background-color: #FFFF00;}
-#input_yellow_js.closed {background-color: white;}
-
-#input_green_js.open    {background-color: green;}
-#input_green_js.closed  {background-color: white;}
