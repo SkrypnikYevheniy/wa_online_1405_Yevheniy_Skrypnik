@@ -89,8 +89,11 @@ var _light = __webpack_require__(9);
 
 var _light_js = __webpack_require__(10);
 
+var _lighter_auto = __webpack_require__(12);
+
 (0, _light.clickCounter)();
 (0, _light_js.clickCounterJs)();
+(0, _lighter_auto.lighter)();
 
 /***/ }),
 /* 8 */
@@ -160,9 +163,9 @@ __webpack_require__(11);
 
 function clickCounterJs() {
   var lights = document.querySelector('.content_show__js');
-  var lightsRed = document.querySelector('.content_show__red_js');
-  var lightsYellow = document.querySelector('.content_show__yellow_js');
-  var lightsGreen = document.querySelector('.content_show__green_js');
+  var lightsRed = lights.querySelector('.content_show__red_js');
+  var lightsYellow = lights.querySelector('.content_show__yellow_js');
+  var lightsGreen = lights.querySelector('.content_show__green_js');
 
   function redShow() {
     lightsRed.classList.add('content_show__active_js');
@@ -186,6 +189,62 @@ function clickCounterJs() {
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lighter = lighter;
+
+__webpack_require__(13);
+
+function lighter() {
+    var lights = document.querySelector('.wrapper_lighter');
+    var lightsRed = lights.querySelector('.lighter__red');
+    var lightsYellow = lights.querySelector('.lighter__yellow');
+    var lightsGreen = lights.querySelector('.lighter__green');
+    var lightActive = 'lighter__on';
+    var lightState = void 0;
+
+    function turnOff() {
+        lightsRed.classList.remove(lightActive);
+        lightsYellow.classList.remove(lightActive);
+        lightsGreen.classList.remove(lightActive);
+    }
+
+    function switcher(light) {
+        if (lightState == light) {
+            turnOff();
+            lightState = undefined;
+        } else {
+            turnOff();
+            lightState = light;
+            light.classList.add(lightActive);
+        }
+    }
+
+    lightsRed.addEventListener('click', function () {
+        switcher(lightsRed);
+    });
+    lightsYellow.addEventListener('click', function () {
+        switcher(lightsYellow);
+    });
+    lightsGreen.addEventListener('click', function () {
+        switcher(lightsGreen);
+    });
+}
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
