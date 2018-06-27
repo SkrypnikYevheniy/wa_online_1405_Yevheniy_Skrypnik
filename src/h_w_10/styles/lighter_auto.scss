@@ -11,7 +11,7 @@ $light-size: 60px;
     box-shadow: 5px 5px 20px 0 rgba(219, 215, 160, 0.952);
     margin-top: 30px;
     padding: 10px;
-    background-color: rgb(250, 250, 250)
+    background-color: rgb(250, 250, 250);
 }
 .lighter_content {
     width: $light-size;
@@ -20,6 +20,7 @@ $light-size: 60px;
     border-radius: 50%;
     margin: 10px 0;
     background-color: azure;
+    transition: all 0.5s;
 }
 .lighter__red {
     &.lighter__on {

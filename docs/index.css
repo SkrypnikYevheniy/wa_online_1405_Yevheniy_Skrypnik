@@ -1,2 +1,7 @@
 body {
-  background: yellow; }
+  background: yellow;
+  padding: 40px; }
+
+a {
+  color: rgba(8, 219, 71, 0.753);
+  margin-left: 15px; }

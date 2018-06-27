@@ -60,27 +60,89 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
-/* 1 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(2);
+__webpack_require__(16);
+
+var _widjet = __webpack_require__(17);
+
+(0, _widjet.accordion)();
 
 /***/ }),
-/* 2 */
+/* 16 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.accordion = accordion;
+
+__webpack_require__(18);
+
+function accordion() {
+    var piano = document.querySelector('.content_wrapper');
+    var notes = Array.from(piano.querySelectorAll('.accordion__icon'));
+    var texts = Array.from(piano.querySelectorAll('.accordion__text'));
+    var HideText = 'accordion__text__none';
+
+    function swicther() {
+        for (var i = 0; i < notes.length; i++) {
+            notes[i].addEventListener('click', turnOn);
+        }
+    }
+
+    function turnOn() {
+        for (var i = 0; i < notes.length; i++) {
+            texts[i].classList.add(HideText);
+            if (notes[i] == event.currentTarget) {
+                texts[i].classList.toggle(HideText);
+            }
+        }
+    }
+
+    swicther();
+}
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
