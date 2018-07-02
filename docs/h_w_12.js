@@ -85,13 +85,26 @@ var _accordion = __webpack_require__(22);
 
 var _creation = __webpack_require__(24);
 
-(0, _creation.creation)();
+function AutoAccordions(target) {
+    var HereBeAccordion = document.createElement('div');
+    HereBeAccordion.classList.add('here__be__accordion');
+    target.appendChild(HereBeAccordion);
+    var createdAccordions = Array.from(document.querySelectorAll('.here__be__accordion'));
 
-var accordions = Array.from(document.querySelectorAll('.content_wrapper'));
+    for (var i = 0; i < createdAccordions.length; i++) {
+        (0, _creation.creation)(createdAccordions[i]);
+    }
 
-for (var i = 0; i < accordions.length; i++) {
-    (0, _accordion.accordion)(accordions[i]);
+    var accordions = Array.from(document.querySelectorAll('.content_wrapper'));
+
+    for (var _i = 0; _i < accordions.length; _i++) {
+        (0, _accordion.accordion)(accordions[_i]);
+    }
 }
+
+AutoAccordions(document.querySelector('.here__be__accordionh'));
+AutoAccordions(document.querySelector('.here__be__accordionj'));
+AutoAccordions(document.querySelector('.here__be'));
 
 /***/ }),
 
@@ -161,9 +174,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.creation = creation;
-function creation() {
+function creation(AcordionPlace) {
     var ContentWrapper = document.createElement('div');
-    var AcordionPlace = document.querySelector('.here__be__accordion');
     var AccordionBodyCreated = 'content_wrapper';
     var AccordionBody = 'created-content';
 
@@ -171,8 +183,34 @@ function creation() {
     ContentWrapper.classList.add(AccordionBody);
     ContentWrapper.classList.add(AccordionBodyCreated);
 
-    var targetEl = document.querySelector('.created-content');
-    targetEl.innerHTML = '\n    <div class="accordion__icon accordion__icon__border">\n        <span>Collapsible item #1</span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt obcaecati rem nostrum dicta doloremque vitae reprehenderit pariatur eveniet, quidem mollitia nihil ad blanditiis. Enim nulla quos laborum accusantium. Quod, deleniti.</div>\n    <div class="accordion__icon accordion__icon__border">\n        <span>Collapsible item #2</span>\n        <span class="accordion__icon__right-part accordion__icon__right-part_open">&#8249</span></div>\n    <div class="accordion__text accordion__text__show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolorum tempora mollitia ducimus nobis a exercitationem accusantium quia, illum quae maiores ad accusamus itaque quibusdam quasi odit, possimus dignissimos distinctio?</div>\n    <div class="accordion__icon accordion__icon__border">\n        <span>Collapsible item #3</span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsa tempora facere magnam similique, unde autem totam sit in a esse? Modi, iste mollitia. Itaque autem asperiores nemo sint laboriosam.</div>\n    <div class="accordion__icon">\n        <span>Collapsible item #4</span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione nesciunt, quidem alias debitis rem porro neque tenetur labore temporibus excepturi, consequuntur doloremque nemo, fugit unde ullam. Dolore deleniti corrupti tempora?</div>\n     ';
+    var targetEl = AcordionPlace.querySelector('.created-content');
+    targetEl.innerHTML = '\n    <div class="accordion__icon accordion__icon__border">\n        <span class="accordion__icon__title"></span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text accordion__text__show"></div>\n    <div class="accordion__icon accordion__icon__border">\n        <span class="accordion__icon__title"></span>\n        <span class="accordion__icon__right-part accordion__icon__right-part_open">&#8249</span></div>\n    <div class="accordion__text"></div>\n    <div class="accordion__icon accordion__icon__border">\n        <span class="accordion__icon__title"></span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text"></div>\n    <div class="accordion__icon">\n        <span class="accordion__icon__title"></span>\n        <span class="accordion__icon__right-part">&#8249</span></div>\n    <div class="accordion__text"></div>\n     ';
+
+    var accordContent = [{
+        title: 'Collapsible item #1',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti doloremque eaque, harum id inventore ipsam maiores porro quibusdam quis rerum sed tempore velit. Atque est excepturi porro quae voluptas?'
+    }, {
+        title: 'Collapsible item #2',
+        content: 'Sorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti doloremque eaque, harum id inventore ipsam maiores porro quibusdam quis rerum sed tempore velit. Atque est excepturi porro quae voluptas?'
+    }, {
+        title: 'Collapsible item #3',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsa tempora facere magnam similique, unde autem totam sit in a esse? Modi, iste mollitia. Itaque autem asperiores nemo sint laboriosam.'
+    }, {
+        title: 'Collapsible item #4',
+        content: 'Porem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti doloremque eaque, harum id inventore ipsam maiores porro quibusdam quis rerum sed tempore velit. Atque est excepturi porro quae voluptas?'
+    }];
+
+    function pasteContent(target) {
+        var accordionIconTitle = Array.from(AcordionPlace.querySelectorAll('.accordion__icon__title'));
+        var accordionText = Array.from(AcordionPlace.querySelectorAll('.accordion__text'));
+        for (var i = 0; i < accordionIconTitle.length; i++) {
+            accordionIconTitle[i].textContent = target[i].title;
+        }
+        for (var _i = 0; _i < accordionText.length; _i++) {
+            accordionText[_i].textContent = target[_i].content;
+        }
+    }
+    pasteContent(accordContent);
 }
 
 /***/ })
