@@ -1,0 +1,126 @@
+.activity {
+    height: 513px;
+    background-color: #ffffff;
+    &__title {
+        width: 320px;
+        font-size: 35px;
+        font-weight: 500;
+        color: #202020;
+        margin: 0 auto;
+        padding-top: 65px;
+    }
+    &__type {
+        padding-top: 50px;
+        text-align: center;
+        &__title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
+            color: #202020;
+            padding: 15px;       
+        }
+        &__text {
+            opacity: 0.7;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+            letter-spacing: normal;
+            text-align: center;
+            color: #272727;
+            padding: 0 40px;
+        }
+    }
+}
+.side-image {
+    position: absolute;
+    top: 1075px;
+    &__right {
+        position: absolute;
+        top: 2000px;
+        left: 1279px;
+        transform: rotate(180deg);
+    }
+}
+.description {
+    height: 1862px;
+    background-color: #f4f9fd;
+    &__wrepper {
+        max-width: 1284px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+    &__image {
+        width: 54%;
+    }
+    &__content {
+        width: 45%;
+        &__title {
+            width: 381px;
+            padding-left: 172px;
+        }
+        &__text {
+            width: 381px;
+            padding: 40px 0 0 172px;
+        }
+    }
+    &__content-right-part {
+        width: 381px;
+        padding: 40px 0 0;
+        margin: 0;
+    }
+}
+.reviews {
+    width: 100%;
+    height: 520px;
+    background-image: linear-gradient(110deg, #250f8a, #02ecf1);
+    &__title {
+        margin: 0 auto;
+        width: 411px;
+        height: 45px;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 1.29;
+        text-align: center;
+        color: #ffffff;
+        padding: 80px 0 50px 0;
+        padding: 80px 0 50px 0;
+    }
+    &__content-quotes {
+        font-size: 40px;
+        line-height: 0.6;
+        color: #ffffff;
+        margin: 0 auto;
+        width: 20px;
+        padding-top: 30px;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        &__wrepper {
+            width: 301px;
+            height: 261px;
+            border-radius: 5px;
+            background-color: #ffffff36;
+            margin: 0 10px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        &__img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding-right: 20px;
+            float: left;
+        }
+        &__name {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        &__job {
+            opacity: 0.5;
+        }
+    } 
+}

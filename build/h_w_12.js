@@ -86,19 +86,13 @@ var _accordion = __webpack_require__(22);
 var _creation = __webpack_require__(24);
 
 function AutoAccordions(target) {
-    var HereBeAccordion = document.createElement('div');
-    HereBeAccordion.classList.add('here__be__accordion');
-    target.appendChild(HereBeAccordion);
-    var createdAccordions = Array.from(document.querySelectorAll('.here__be__accordion'));
 
-    for (var i = 0; i < createdAccordions.length; i++) {
-        (0, _creation.creation)(createdAccordions[i]);
-    }
+    (0, _creation.creation)(target);
 
     var accordions = Array.from(document.querySelectorAll('.content_wrapper'));
 
-    for (var _i = 0; _i < accordions.length; _i++) {
-        (0, _accordion.accordion)(accordions[_i]);
+    for (var i = 0; i < accordions.length; i++) {
+        (0, _accordion.accordion)(accordions[i]);
     }
 }
 

@@ -93,7 +93,8 @@ body {
   border: 1px solid #080808;
   border-radius: 50%;
   margin: 10px 0;
-  background-color: azure; }
+  background-color: azure;
+  transition: all 0.5s; }
 
 .lighter__red.lighter__on {
   background-color: #d80b0b; }
@@ -197,7 +198,8 @@ body {
   border: 1px solid #080808;
   border-radius: 50%;
   margin: 10px 0;
-  background-color: azure; }
+  background-color: azure;
+  transition: all 0.5s; }
 
 .lighter__red.lighter__on {
   background-color: #d80b0b; }

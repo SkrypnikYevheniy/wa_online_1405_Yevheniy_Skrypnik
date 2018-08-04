@@ -1,0 +1,97 @@
+@media screen and (max-width: 768px) {
+    .container-xs {
+        background-color: #4c6ac5 !important;
+        background-image: none;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 100% !important;
+    }
+    .rewiews__container-xs {
+        height: 100% !important;
+        width: 100%;
+    }
+    .reviews__content-xs {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .column-center-xs {
+        align-items: center;
+    }
+    .title-xs {
+        text-align: center;
+        font-size: 32px;
+        padding-top: 80px;
+    }
+    .title__text-xs {
+        text-align: center;
+        font-size: 21px;
+    }
+    .activity-xs {
+        color: #FFF !important;
+        text-align: center;
+    }
+    .description__content-xs {
+        width: 100% !important;
+        padding: 5px !important;
+        color: #FFF !important;
+        text-align: center;
+    }
+    .description__image-xs {
+        width: 100% !important;
+    }
+    .reviews__content__wrepper-xs {
+        margin-top: 10px !important;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .container-top-part-md {
+        height: 100%;
+        background-image: url(../../assets/project/background.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .title-md {
+        max-width: 422px;
+        height: auto;
+        padding-top: 115px;
+        font-size: 35px;
+        padding-left: 20px;
+    }
+    .title__text-md {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    .title__btn-md {
+        margin: 75px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .small-hidden {
+        display: none !important;
+    }
+    .small-padding-off {
+        padding: 0 !important;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .description__content-lg {
+        padding: 5px !important;
+        width: 100% !important;
+        text-align: center;
+    }
+    .container-lg {
+        height: 100% !important;
+    }
+}
+@media screen and (max-width: 1399px) {
+    .medium-hidden {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .header-hidden {
+        display: none !important;
+    }
+}

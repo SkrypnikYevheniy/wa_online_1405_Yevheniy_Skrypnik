@@ -5,14 +5,8 @@ import { accordion } from './skrypts/accordion';
 import { creation } from './skrypts/creation';
 
 function AutoAccordions(target) {
-    const HereBeAccordion = document.createElement('div');
-    HereBeAccordion.classList.add('here__be__accordion');
-    target.appendChild(HereBeAccordion);
-    const createdAccordions = Array.from(document.querySelectorAll('.here__be__accordion'));
-
-    for (let i = 0; i < createdAccordions.length; i++) {
-        creation(createdAccordions[i]);
-        }
+    
+    creation(target);
 
     const accordions = Array.from(document.querySelectorAll('.content_wrapper'));
 

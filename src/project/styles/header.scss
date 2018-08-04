@@ -1,0 +1,106 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    &__content__link {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.6;
+        text-align: center;
+        color: #ffffff8a;
+        padding: 20px;
+        line-height: 2.5;
+    }
+    &__content__btn {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        outline: none;
+    }
+    &__content__btn-text {
+        font-size: 15px;
+        font-weight: 600;
+        font-weight: 600;
+        line-height: 1.6;
+        text-align: center;
+        color: #250f8a;
+    }
+}
+.header__content__link:hover {
+    transition: 0.5s;
+    color: #ffffff;
+}
+.header__content__btn:hover {
+    transition: 0.3s;
+    background-color: #8cbdf5;
+}
+.header-xs {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #0f3055;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        padding: 10px;
+        display: block;
+    }
+}
+.header-xs__btn {
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #040042ed;
+    outline: none;
+    margin: 14px;
+}
+.header-xs__btn-text {
+    font-size: 15px;
+    font-weight: 600;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    color: #FFF;
+}
+.drop-dawn__item {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    color: #ffffff8a;
+    padding: 10px;
+    line-height: 3.5;
+    display: block;
+    width: 200px;
+}
+.drop-dawn__list {
+    background-color: #0f3055;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: all 300ms ease-out;
+    overflow:hidden;
+}
+.drop-dawn:hover .drop-dawn__list {
+    visibility: visible;
+    opacity: 0.9;
+    height: 360px;
+}
+.drop-dawn__link:hover {
+    color: #FFF;
+    background-color: #0b2441;
+}
+.drop-dawn__item:hover {
+    color: #FFF;
+}
+.header-xs__btn:hover {
+    background-color: #483890bd;
+}

@@ -14,6 +14,8 @@ const baseConf = (_path) => {
     h_w_10: ['./src/h_w_10/h_w_10.js'],
     h_w_11: ['./src/h_w_11/h_w_11.js'],
     h_w_12: ['./src/h_w_12/h_w_12.js'],
+    h_w_14: ['./src/h_w_14/h_w_14.js'],
+    project: ['./src/project/project.js'],
     
   };
 
@@ -63,7 +65,7 @@ const baseConf = (_path) => {
           ]
         },
         {
-          test: /\.js/,
+          test: /\.(js|jsx)/,
           exclude: /(node_modules)/,
           use: [
             {
