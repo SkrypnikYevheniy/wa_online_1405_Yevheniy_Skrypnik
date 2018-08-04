@@ -1,7 +1,24 @@
+html {
+  font-family: Arial, Helvetica, sans-serif; }
+
 body {
-  background: yellow;
+  background: #f8f7bd;
   padding: 40px; }
 
 a {
-  color: rgba(8, 219, 71, 0.753);
+  color: rgba(59, 151, 50, 0.753);
   margin-left: 15px; }
+
+.project {
+  color: #04139e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: oblique;
+  text-decoration: none;
+  display: block;
+  margin: 50px;
+  transition: all 0.7s; }
+
+.project:hover {
+  font-style: normal;
+  color: #080244; }
